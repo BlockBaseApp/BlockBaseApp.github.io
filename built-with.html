@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How BlockBaseMC was built, including Electron, JavaScript, Minecraft services, Modrinth, CurseForge, and GitHub Pages." />
+    <title>Built With - BlockBaseMC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="BlockBaseMC home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong>BlockBaseMC</strong><small>Minecraft Java Launcher</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a class="active" href="built-with.html">Built With</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">How it was built</p>
+        <h1>An Electron app with a custom Java launcher backend.</h1>
+        <p>
+          BlockBaseMC is a desktop app. The interface runs in Electron, while the main process
+          handles Minecraft downloads, Microsoft authentication, file imports, process launching,
+          and operating-system actions.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="timeline">
+          <article>
+            <span>Desktop shell</span>
+            <h2>Electron</h2>
+            <p>Electron provides the Windows desktop window, native dialogs, secure preload API, browser login handoff, and portable executable packaging.</p>
+          </article>
+          <article>
+            <span>Frontend</span>
+            <h2>HTML, CSS, and JavaScript</h2>
+            <p>The UI is a static app enhanced with custom JavaScript for accounts, imports, server cards, mod browsing, content management, and profile tools.</p>
+          </article>
+          <article>
+            <span>Launcher backend</span>
+            <h2>Node.js services</h2>
+            <p>The Electron main process downloads Minecraft metadata, assets, libraries, loader files, extracts natives, starts Java, and streams logs back to the UI.</p>
+          </article>
+          <article>
+            <span>Build output</span>
+            <h2>electron-builder</h2>
+            <p>Portable Windows builds are produced with electron-builder. The current local build path is <code>release-fast57</code>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Services and APIs</p>
+          <h2>The launcher talks to the same ecosystem Minecraft players already use.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">MS</span>
+            <h3>Microsoft and Minecraft auth</h3>
+            <p>Microsoft browser/device login, Xbox Live auth, XSTS auth, Minecraft Services login, entitlement checks, and profile lookup.</p>
+          </article>
+          <article>
+            <span class="feature-icon">MR</span>
+            <h3>Modrinth</h3>
+            <p>Search and install mods, modpacks, shaders, and resource packs from Modrinth project and version metadata.</p>
+          </article>
+          <article>
+            <span class="feature-icon">CF</span>
+            <h3>CurseForge</h3>
+            <p>Search and install supported CurseForge projects through the CurseForge API when a user supplies an API key.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>BlockBaseMC Launcher</span>
+      <span><a href="credits.html">View credits and inspiration</a></span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BlockBaseMC launcher features for accounts, profiles, mods, imports, servers, and running Minecraft instances." />
+    <title>Features - BlockBaseMC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="BlockBaseMC home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong>BlockBaseMC</strong><small>Minecraft Java Launcher</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="features.html">Features</a>
+        <a href="built-with.html">Built With</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">What can be done</p>
+        <h1>Manage Minecraft from profile creation to shutdown.</h1>
+        <p>
+          BlockBaseMC is focused on the full Java Edition loop: create an instance, choose a
+          version and loader, sign in, install content, launch, watch logs, and stop the process
+          cleanly when you are finished.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="detail-grid">
+          <article>
+            <h2>Profiles</h2>
+            <p>Each profile can have its own Minecraft version, loader, RAM values, JVM arguments, launch args, resolution, fullscreen setting, quick join server, and isolated game folder.</p>
+          </article>
+          <article>
+            <h2>Accounts</h2>
+            <p>Microsoft Java login uses the system browser. Saved sessions can reauth with refresh tokens, and offline/dev accounts are available for local testing.</p>
+          </article>
+          <article>
+            <h2>Launch</h2>
+            <p>The launcher downloads version metadata, assets, libraries, natives, and loader metadata, then starts Minecraft with profile-specific settings and live logs.</p>
+          </article>
+          <article>
+            <h2>Running Instances</h2>
+            <p>Only live Java processes are shown. Each entry is labeled by profile and account, includes the PID, and can be killed from the launcher.</p>
+          </article>
+          <article>
+            <h2>Imports</h2>
+            <p>Import ZIP modpacks, Modrinth packs, CurseForge packs, Prism/MultiMC instances, and existing .minecraft folders into BlockBaseMC profiles.</p>
+          </article>
+          <article>
+            <h2>Content Manager</h2>
+            <p>Installed mods, resource packs, and shader packs can be listed, disabled, restored, deleted, or opened in Explorer from the selected profile.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <p class="eyebrow">Mods & Packs</p>
+          <h2>Search and install from real mod platforms.</h2>
+          <p>
+            Modrinth search works without a key. CurseForge support uses a user API key, then
+            searches, installs, and attempts dependency downloads where project metadata allows it.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>Mods install into the selected profile's mods folder.</li>
+          <li>Resource packs and shaders go to their matching folders.</li>
+          <li>Modpacks can create new profiles with the expected overrides.</li>
+          <li>Wrong-version mods are still Minecraft's job to reject, but logs make the reason readable.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>BlockBaseMC Launcher</span>
+      <span><a href="built-with.html">See how it was built</a></span>
+    </footer>
+  </body>
+</html>

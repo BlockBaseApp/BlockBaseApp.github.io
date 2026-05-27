@@ -95,6 +95,10 @@ nav a:hover {
   color: var(--text);
 }
 
+nav a.active {
+  color: var(--text);
+}
+
 main {
   overflow: hidden;
 }
@@ -102,7 +106,8 @@ main {
 .hero,
 .section,
 .split-section,
-.download-panel {
+.download-panel,
+.page-hero {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
 }
@@ -318,6 +323,20 @@ li {
   padding: 80px 0;
 }
 
+.page-hero {
+  display: grid;
+  gap: 18px;
+  padding: 76px 0 34px;
+}
+
+.page-hero h1 {
+  max-width: 920px;
+}
+
+.page-hero p {
+  max-width: 780px;
+}
+
 .section-heading {
   display: grid;
   gap: 10px;
@@ -333,7 +352,10 @@ li {
 
 .feature-grid article,
 .download-panel,
-.split-section {
+.split-section,
+.detail-grid article,
+.timeline article,
+.roadmap-grid article {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--panel);
@@ -344,6 +366,73 @@ li {
   display: grid;
   gap: 12px;
   padding: 20px;
+}
+
+.detail-grid,
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.detail-grid article,
+.roadmap-grid article {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 22px;
+}
+
+.detail-grid h2,
+.roadmap-grid h2,
+.timeline h2 {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline article {
+  display: grid;
+  grid-template-columns: 160px minmax(180px, 0.4fr) 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 22px;
+}
+
+.timeline article span,
+.status-chip {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.timeline article span {
+  color: #07100b;
+  background: var(--accent);
+}
+
+.status-chip.done {
+  color: #07100b;
+  background: var(--accent);
+}
+
+.status-chip.next {
+  color: #211309;
+  background: #dfb45f;
+}
+
+.status-chip.planned {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .feature-icon {
@@ -412,7 +501,13 @@ code {
   .hero,
   .split-section,
   .download-panel,
-  .feature-grid {
+  .feature-grid,
+  .detail-grid,
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline article {
     grid-template-columns: 1fr;
   }
 
@@ -434,7 +529,8 @@ code {
   .hero,
   .section,
   .split-section,
-  .download-panel {
+  .download-panel,
+  .page-hero {
     width: min(100% - 24px, 1180px);
   }
 

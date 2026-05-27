@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BlockBaseMC roadmap, ideas, planned improvements, and known limits." />
+    <title>Roadmap - BlockBaseMC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="BlockBaseMC home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong>BlockBaseMC</strong><small>Minecraft Java Launcher</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="built-with.html">Built With</a>
+        <a class="active" href="roadmap.html">Roadmap</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Ideas and next steps</p>
+        <h1>Make the launcher easier, safer, and more complete over time.</h1>
+        <p>
+          BlockBaseMC is still early. The current goal is to make Java Edition reliable first,
+          then improve compatibility, content installs, updates, and cross-platform builds.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="roadmap-grid">
+          <article>
+            <span class="status-chip done">Working now</span>
+            <h2>Java launch path</h2>
+            <p>Vanilla, snapshots, Fabric, Forge, Quilt, and NeoForge paths exist where upstream metadata can be resolved.</p>
+          </article>
+          <article>
+            <span class="status-chip done">Working now</span>
+            <h2>Account flow</h2>
+            <p>Browser-based Microsoft login, saved account cards, refresh-token reauth, and offline/dev accounts.</p>
+          </article>
+          <article>
+            <span class="status-chip next">Next</span>
+            <h2>Cleaner mod installs</h2>
+            <p>Better dependency resolution, clearer incompatible mod warnings, and update-all flows for selected profiles.</p>
+          </article>
+          <article>
+            <span class="status-chip next">Next</span>
+            <h2>Release workflow</h2>
+            <p>Use GitHub Releases for public builds, cleaner changelogs, and a download button that always points to the newest exe.</p>
+          </article>
+          <article>
+            <span class="status-chip planned">Planned</span>
+            <h2>macOS and Linux</h2>
+            <p>The architecture avoids Windows-only assumptions where possible, but cross-platform builds still need testing and packaging.</p>
+          </article>
+          <article>
+            <span class="status-chip planned">Planned</span>
+            <h2>Better repair tools</h2>
+            <p>One-click repairs for assets, libraries, loader files, mod folders, and corrupted imports.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <p class="eyebrow">Known direction</p>
+          <h2>Java Edition stays the focus.</h2>
+          <p>
+            Bedrock support was removed so the launcher can get one job right first: launching
+            Minecraft Java with accounts, mods, profiles, and imports that actually work.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>More reliable Forge, NeoForge, and Quilt metadata handling.</li>
+          <li>Better UI messages when Minecraft rejects a mod or version.</li>
+          <li>Profile export and import polish.</li>
+          <li>Theme controls and layout cleanup as the app grows.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>BlockBaseMC Launcher</span>
+      <span><a href="https://github.com/BlockBaseApp/BlockBase-Launcher">Source on GitHub</a></span>
+    </footer>
+  </body>
+</html>
