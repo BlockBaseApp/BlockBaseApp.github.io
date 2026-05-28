@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="BlockBaseMC update history from the first working builds through the latest release-fast60 build." />
+    <meta name="description" content="BlockBaseMC update history from the first working builds through the latest release-fast62 build." />
     <title>Updates - BlockBaseMC</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -29,7 +29,7 @@
         <h1>From blank launcher shell to a working BlockBaseMC build.</h1>
         <p>
           This page tracks the major changes from the first local builds through the current
-          release-fast60 build. Early builds moved quickly, so some entries group related work by
+          release-fast62 build. Early builds moved quickly, so some entries group related work by
           milestone instead of pretending every test build was a public release.
         </p>
       </section>
@@ -38,6 +38,19 @@
         <div class="update-list">
           <article>
             <span class="status-chip done">Latest</span>
+            <h2>release-fast62 - GitHub release update checker</h2>
+            <p>Added a safe portable-app update flow that checks GitHub Releases instead of trying to replace the running exe.</p>
+            <ul>
+              <li>Bumped the app version to <code>0.1.1</code> so future releases can be compared properly.</li>
+              <li>Checks <code>itz-me-fisherYT/BlockBase-Launcher</code> for the latest GitHub Release.</li>
+              <li>Compares the latest release version against the current launcher version.</li>
+              <li>Shows an update banner with View release, Download update, and Dismiss actions.</li>
+              <li>Added a manual Check updates button on the Downloads page.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Auth fix</span>
             <h2>release-fast60 - Microsoft silent reauth fix</h2>
             <p>Fixed the Microsoft refresh request for the default Minecraft client login flow by sending the required Xbox Live scope.</p>
             <ul>
@@ -182,7 +195,7 @@
 
     <footer class="site-footer">
       <span>BlockBaseMC Launcher</span>
-      <span>Latest local build: release-fast60</span>
+      <span>Latest local build: release-fast62</span>
     </footer>
   </body>
 </html>
