@@ -375,8 +375,14 @@ li {
   gap: 16px;
 }
 
+.update-list {
+  display: grid;
+  gap: 16px;
+}
+
 .detail-grid article,
-.roadmap-grid article {
+.roadmap-grid article,
+.update-list article {
   display: grid;
   align-content: start;
   gap: 12px;
@@ -385,8 +391,23 @@ li {
 
 .detail-grid h2,
 .roadmap-grid h2,
-.timeline h2 {
+.timeline h2,
+.update-list h2 {
   font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.update-list article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.update-list ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .timeline {

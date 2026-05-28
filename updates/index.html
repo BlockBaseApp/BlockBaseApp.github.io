@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BlockBaseMC update history from the first working builds through the latest release-fast60 build." />
+    <title>Updates - BlockBaseMC</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="BlockBaseMC home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span><strong>BlockBaseMC</strong><small>Minecraft Java Launcher</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/features/">Features</a>
+        <a href="/built-with/">Built With</a>
+        <a href="/roadmap/">Roadmap</a>
+        <a class="active" href="/updates/">Updates</a>
+        <a href="/credits/">Credits</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Update history</p>
+        <h1>From blank launcher shell to a working BlockBaseMC build.</h1>
+        <p>
+          This page tracks the major changes from the first local builds through the current
+          release-fast60 build. Early builds moved quickly, so some entries group related work by
+          milestone instead of pretending every test build was a public release.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="update-list">
+          <article>
+            <span class="status-chip done">Latest</span>
+            <h2>release-fast60 - Microsoft silent reauth fix</h2>
+            <p>Fixed the Microsoft refresh request for the default Minecraft client login flow by sending the required Xbox Live scope.</p>
+            <ul>
+              <li>Silent reauth now uses the saved refresh token correctly.</li>
+              <li>Reauth should refresh without opening browser login.</li>
+              <li>Discord webhook update sent for the build.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Account UI</span>
+            <h2>release-fast59 - Reauth button cleanup</h2>
+            <p>Made the account card stop showing Reauth when silent reauth is not available.</p>
+            <ul>
+              <li>Old Microsoft accounts show Silent reauth unavailable.</li>
+              <li>Added Upgrade login for accounts that need a one-time fresh sign-in.</li>
+              <li>Cleaned backend reauth messages so they are less scary.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Account UI</span>
+            <h2>release-fast58 - Silent-only reauth</h2>
+            <p>Changed Reauth so it never opens the Microsoft login flow as a fallback.</p>
+            <ul>
+              <li>Reauth now succeeds silently or shows a message.</li>
+              <li>Removed the full browser-login fallback from the Reauth path.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Accounts</span>
+            <h2>release-fast57 - Refresh-token reauth backend</h2>
+            <p>Added the first real Microsoft reauth backend path.</p>
+            <ul>
+              <li>Saved Microsoft refresh tokens for new logins.</li>
+              <li>Added a dedicated reauth IPC method.</li>
+              <li>Launch auth can attempt token refresh before falling back to offline/dev mode.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Branding</span>
+            <h2>release-fast56 - BlockBaseMC rename</h2>
+            <p>Renamed the launcher from BlockForge to BlockBaseMC.</p>
+            <ul>
+              <li>Updated the app title, product name, docs, website copy, and launcher branding.</li>
+              <li>Changed new default profile folders to use <code>.blockbasemc</code>.</li>
+              <li>Kept internal storage keys stable so existing settings did not disappear.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Website</span>
+            <h2>Website updates - BlockBaseApp.github.io</h2>
+            <p>Moved the public website into the separate BlockBaseApp GitHub Pages repo.</p>
+            <ul>
+              <li>Created a clean root website at <code>https://blockbaseapp.github.io/</code>.</li>
+              <li>Expanded the site into Home, Features, Built With, Roadmap, Updates, and Credits pages.</li>
+              <li>Added clean URLs like <code>/features/</code> and fixed the shared CSS path.</li>
+              <li>Pointed download and source links to <code>itz-me-fisherYT/BlockBase-Launcher</code>.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Public repo</span>
+            <h2>Source cleanup and repo split</h2>
+            <p>Prepared the source repository for GitHub and separated the launcher from the website.</p>
+            <ul>
+              <li>Removed old local release build folders from source tracking.</li>
+              <li>Ignored future <code>release-fast*</code> folders.</li>
+              <li>Kept launcher code on the main GitHub account and website code on the BlockBaseApp account.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Builds 52-55</span>
+            <h2>release-fast52 to release-fast55 - Mods, imports, and Java focus</h2>
+            <p>These builds focused on making the launcher useful for real Minecraft Java profiles.</p>
+            <ul>
+              <li>Removed Bedrock support from the launcher scope.</li>
+              <li>Improved Running Instances so only live Java processes appear.</li>
+              <li>Added process kill controls labeled by profile/account.</li>
+              <li>Improved Modrinth and CurseForge browsing and installs for the selected library profile.</li>
+              <li>Added import flows for ZIP packs, .minecraft folders, Prism/MultiMC, Modrinth, and CurseForge packs.</li>
+              <li>Added the Open folder button next to Game folder.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Builds 48-51</span>
+            <h2>release-fast48 to release-fast51 - Version and loader work</h2>
+            <p>These builds focused on Minecraft version selection and loader launch paths.</p>
+            <ul>
+              <li>Added a Minecraft version dropdown.</li>
+              <li>Started supporting Fabric, Forge, NeoForge, Quilt, Vanilla, and snapshots where metadata was available.</li>
+              <li>Fixed Fabric duplicate ASM classpath issues.</li>
+              <li>Improved handling for imported profiles that need a newer Minecraft version.</li>
+              <li>Added theme/color controls and fixed reset behavior.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Builds 44-47</span>
+            <h2>release-fast44 to release-fast47 - Accounts, servers, and browsing</h2>
+            <p>These builds focused on account management, server cards, and mod browser stability.</p>
+            <ul>
+              <li>Added Microsoft Java account cards with username, email/status, skin actions, and delete controls.</li>
+              <li>Added 3D skin modal work and skin preview controls.</li>
+              <li>Added server creation, delete controls, quick join account selection, and server status details.</li>
+              <li>Fixed button clicks unexpectedly switching back to the Library tab.</li>
+              <li>Improved Browse and Mods & Packs tab freezing/search behavior.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Builds 42-43</span>
+            <h2>release-fast42 to release-fast43 - First playable launcher builds</h2>
+            <p>The earliest local builds turned the blank Electron shell into a usable Minecraft launcher interface.</p>
+            <ul>
+              <li>Built the Prism-inspired sidebar layout and instance library.</li>
+              <li>Added profile creation, editing, duplicate, delete, RAM settings, resolution, JVM args, and launch args.</li>
+              <li>Made the Instances page scrollable and fixed resize/clipping issues.</li>
+              <li>Added Minecraft Java launch preparation, asset/library downloads, Java detection, and launch logs.</li>
+              <li>Fixed the quick play crash caused by passing more than one quick join option.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip planned">Before fast42</span>
+            <h2>Initial prototype - from blank window to launcher shell</h2>
+            <p>The first prototype was a plain Electron window before the custom launcher UI existed.</p>
+            <ul>
+              <li>Started with a Windows desktop <code>.exe</code> target.</li>
+              <li>Created the core Electron app structure.</li>
+              <li>Planned the full Java/Bedrock feature list, then narrowed the real app to Java Edition first.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>BlockBaseMC Launcher</span>
+      <span>Latest local build: release-fast60</span>
+    </footer>
+  </body>
+</html>
