@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="BlockBaseMC update history from the first working builds through the latest release-fast62 build." />
+    <meta name="description" content="BlockBaseMC update history from the first working builds through the latest release-fast63 build." />
     <title>Updates - BlockBaseMC</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -29,7 +29,7 @@
         <h1>From blank launcher shell to a working BlockBaseMC build.</h1>
         <p>
           This page tracks the major changes from the first local builds through the current
-          release-fast62 build. Early builds moved quickly, so some entries group related work by
+          release-fast63 build. Early builds moved quickly, so some entries group related work by
           milestone instead of pretending every test build was a public release.
         </p>
       </section>
@@ -38,6 +38,18 @@
         <div class="update-list">
           <article>
             <span class="status-chip done">Latest</span>
+            <h2>release-fast63 - Instance creation fix</h2>
+            <p>Fixed the Prism-style Library create flow so Create instance and Update selected actually run.</p>
+            <ul>
+              <li>Fixed empty <code>data-*</code> button attributes being treated as false.</li>
+              <li>Create instance now confirms the profile was created.</li>
+              <li>New instances get unique folders even when names are reused.</li>
+              <li>Bumped the app version to <code>0.1.2</code>.</li>
+            </ul>
+          </article>
+
+          <article>
+            <span class="status-chip done">Updater</span>
             <h2>release-fast62 - GitHub release update checker</h2>
             <p>Added a safe portable-app update flow that checks GitHub Releases instead of trying to replace the running exe.</p>
             <ul>
@@ -195,7 +207,7 @@
 
     <footer class="site-footer">
       <span>BlockBaseMC Launcher</span>
-      <span>Latest local build: release-fast62</span>
+      <span>Latest local build: release-fast63</span>
     </footer>
   </body>
 </html>
